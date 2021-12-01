@@ -161,7 +161,7 @@ else:
     device = torch.device('cpu')
 
 print("Training log with 300 ecophs")
-log_directory=[Path('/content/drive/MyDrive/Learning/Machine Learning/DETR/log300')]
+log_directory=[Path('/outputs')]
 
 fields_of_interest = (
     'loss',
@@ -221,11 +221,11 @@ for i in range(len(url)):
 #===========================================
 print("Test the trained model and enhanced model with small objects (before and after)")
 img={}
-img[0]="/content/drive/MyDrive/Learning/Machine Learning/DETR/test1.jpg"
-img[1]="/content/drive/MyDrive/Learning/Machine Learning/DETR/test2.jpg"
-img[2]="/content/drive/MyDrive/Learning/Machine Learning/DETR/test3.jpg"
-img[3]="/content/drive/MyDrive/Learning/Machine Learning/DETR/test4.jpg"
-img[4]="/content/drive/MyDrive/Learning/Machine Learning/DETR/test5.jpg"
+img[0]="test_images/test1.jpg"
+img[1]="test_images/test2.jpg"
+img[2]="test_images/test3.jpg"
+img[3]="test_images/test4.jpg"
+img[4]="test_images/test5.jpg"
 
 for x in range(5):
   im = Image.open(img[x])
